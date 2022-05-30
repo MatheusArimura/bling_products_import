@@ -1,0 +1,6 @@
+API_KEY = "aebfeb0dbacc095d4c0c1af5bab605a7de55e0e0906f58f27aa6f89deec620f71d6c1ed0"
+DB_NAME = ""
+DB_HOST = ""
+DB_PSWD = ""
+DB_PORT = ""
+DB_USER = ""
