@@ -9,7 +9,6 @@ class Products():
     def __init__(self):
         self.api_key = API_KEY
         self.output_type = "json"
-        self.consoles = ['PS5', 'PS4', 'PS3', 'PS2', 'PS1', 'Xbox Series', 'Xbox One', 'Xbox 360', 'Switch']
 
     def execute(self):
         page = 1
@@ -42,7 +41,7 @@ class Products():
     def handle_product(self, product_data: dict) -> bool:
         result = False
         try:
-            if 'Jogos' in product_data['categoria']['descricao'] or 'Console' in product_data['categoria']['descricao'] or 'Acessórios' in product_data['categoria']['descricao'] or '(Usado)' in product_data['descricao'] or any(console in product_data['descricao'] for console in self.consoles):
+            if '(Usado)' in product_data['descricao']:
                 if product_data['codigo']:
                     formatted_data = self.format_product(unformatted_data=product_data)
                     self.save_product(formatted_data)
